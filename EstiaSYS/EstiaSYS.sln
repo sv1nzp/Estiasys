@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EstiaSYS", "EstiaSYS.vbproj", "{A879FAD4-107A-4986-9608-D804E137BC81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A879FAD4-107A-4986-9608-D804E137BC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A879FAD4-107A-4986-9608-D804E137BC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A879FAD4-107A-4986-9608-D804E137BC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A879FAD4-107A-4986-9608-D804E137BC81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92DFF261-8786-45B8-BCA4-1D79AAA30F7F}
+	EndGlobalSection
+EndGlobal
