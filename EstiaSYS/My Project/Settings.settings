@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='iso-8859-7'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EstiaSYS_gr_gsis_www1_RgWsPublic2Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www1.gsis.gr:443/wsaade/RgWsPublic2/RgWsPublic2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

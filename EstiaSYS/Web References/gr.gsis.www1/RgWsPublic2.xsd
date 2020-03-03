@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://rgwspublic2/RgWsPublic2" elementFormDefault="qualified" targetNamespace="http://rgwspublic2/RgWsPublic2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="rg_ws_public2_input_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="afm_called_by" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="afm_called_for" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="as_on_date" nillable="true" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="gen_ws_error_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="error_code" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="error_descr" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="rg_ws_public2_afm_called_by_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="token_username" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="token_afm" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="token_afm_fullname" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="afm_called_by" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="afm_called_by_fullname" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="as_on_date" nillable="true" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="rg_ws_public2_basic_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="afm" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="doy" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="doy_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="i_ni_flag_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="deactivation_flag" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="deactivation_flag_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="firm_flag_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="onomasia" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="commer_title" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="legal_status_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postal_address" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postal_address_no" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postal_zip_code" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="postal_area_description" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="regist_date" nillable="true" type="xsd:date" />
+      <xsd:element minOccurs="0" name="stop_date" nillable="true" type="xsd:date" />
+      <xsd:element minOccurs="0" name="normal_vat_system_flag" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="rg_ws_public2_firm_act_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="firm_act_code" nillable="true" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="firm_act_descr" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="firm_act_kind" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="firm_act_kind_descr" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="rg_ws_public2_firm_act_ttType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="item" type="rg_ws_public2_firm_act_rtType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="rg_ws_public2_result_rtType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="call_seq_id" nillable="true" type="xsd:decimal" />
+      <xsd:element name="error_rec" type="gen_ws_error_rtType" />
+      <xsd:element name="afm_called_by_rec" type="rg_ws_public2_afm_called_by_rtType" />
+      <xsd:element name="basic_rec" type="rg_ws_public2_basic_rtType" />
+      <xsd:element name="firm_act_tab">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="item" type="rg_ws_public2_firm_act_rtType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="rg_ws_public2_input_rtType" type="rg_ws_public2_input_rtType" />
+  <xsd:element name="gen_ws_error_rtType" type="gen_ws_error_rtType" />
+  <xsd:element name="rg_ws_public2_afm_called_by_rtType" type="rg_ws_public2_afm_called_by_rtType" />
+  <xsd:element name="rg_ws_public2_basic_rtType" type="rg_ws_public2_basic_rtType" />
+  <xsd:element name="rg_ws_public2_firm_act_rtType" type="rg_ws_public2_firm_act_rtType" />
+  <xsd:element name="rg_ws_public2_firm_act_ttType" type="rg_ws_public2_firm_act_ttType" />
+  <xsd:element name="rg_ws_public2_result_rtType" type="rg_ws_public2_result_rtType" />
+</xsd:schema>
